@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, Animated, Easing } from 'react-native'
+import { Text } from 'react-native'
 import { StackNavigator, DrawerNavigator } from 'react-navigation'
 import LoginScreen from '../Containers/LoginScreen'
 import SignupScreen from '../Containers/SignupScreen'
@@ -8,22 +8,12 @@ import Screen1 from '../Containers/Screen1'
 import Screen2 from '../Containers/Screen2'
 import Screen3 from '../Containers/Screen3'
 
-// https://github.com/react-community/react-navigation/issues/1254
-const noTransitionConfig = () => ({
-  transitionSpec: {
-    duration: 0,
-    timing: Animated.timing,
-    easing: Easing.step0
-  }
-})
 
 // drawer stack
 const DrawerStack = DrawerNavigator({
   screen1: { screen: Screen1 },
   screen2: { screen: Screen2 },
   screen3: { screen: Screen3 },
-}, {
-  gesturesEnabled: false
 })
 
 const DrawerNavigation = StackNavigator({
@@ -33,7 +23,6 @@ const DrawerNavigation = StackNavigator({
   navigationOptions: ({navigation}) => ({
     headerStyle: {backgroundColor: 'green'},
     title: 'Logged In to your app!',
-    gesturesEnabled: false,
     headerLeft: <Text onPress={() => navigation.navigate('DrawerOpen')}>Menu</Text>
   })
 })
@@ -59,8 +48,7 @@ const PrimaryNav = StackNavigator({
   // Default config for all screens
   headerMode: 'none',
   title: 'Main',
-  initialRouteName: 'loginStack',
-  transitionConfig: noTransitionConfig
+  initialRouteName: 'loginStack'
 })
 
 export default PrimaryNav
