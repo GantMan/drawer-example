@@ -7,6 +7,7 @@ import ForgottenPasswordScreen from '../Containers/ForgottenPasswordScreen'
 import Screen1 from '../Containers/Screen1'
 import Screen2 from '../Containers/Screen2'
 import Screen3 from '../Containers/Screen3'
+import DrawerContainer from '../Containers/DrawerContainer'
 
 // https://github.com/react-community/react-navigation/issues/1254
 const noTransitionConfig = () => ({
@@ -23,7 +24,8 @@ const DrawerStack = DrawerNavigator({
   screen2: { screen: Screen2 },
   screen3: { screen: Screen3 },
 }, {
-  gesturesEnabled: false
+  gesturesEnabled: false,
+  contentComponent: (props) => <DrawerContainer {...props} />
 })
 
 const DrawerNavigation = StackNavigator({
