@@ -1,3 +1,16 @@
+# React Navigation Drawer Example
+
+Review from the blog, or see it being built in 4 parts:
+* [Step 0](https://github.com/GantMan/drawer-example/tree/step0) - brand new app
+* [Step 1](https://github.com/GantMan/drawer-example/tree/step1) - react-navigation in place
+* [Step 2](https://github.com/GantMan/drawer-example/tree/step2) - react-navigation drawer in place
+* [Step 3](https://github.com/GantMan/drawer-example/tree/step3) - fix workflow breaks
+* [Step 4](https://github.com/GantMan/drawer-example/tree/step4) - custom drawer with logout
+
+Review blog post for full analysis of steps.
+
+## Generic Readme follows:
+
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
 Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
