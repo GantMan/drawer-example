@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { Text, Animated, Easing } from 'react-native'
 import { StackNavigator, DrawerNavigator } from 'react-navigation'
 import LoginScreen from '../Containers/LoginScreen'
 import SignupScreen from '../Containers/SignupScreen'
@@ -7,6 +7,15 @@ import ForgottenPasswordScreen from '../Containers/ForgottenPasswordScreen'
 import Screen1 from '../Containers/Screen1'
 import Screen2 from '../Containers/Screen2'
 import Screen3 from '../Containers/Screen3'
+
+// https://github.com/react-community/react-navigation/issues/1254
+const noTransitionConfig = () => ({
+  transitionSpec: {
+    duration: 0,
+    timing: Animated.timing,
+    easing: Easing.step0
+  }
+})
 
 // drawer stack
 const DrawerStack = DrawerNavigator({
@@ -50,7 +59,8 @@ const PrimaryNav = StackNavigator({
   // Default config for all screens
   headerMode: 'none',
   title: 'Main',
-  initialRouteName: 'loginStack'
+  initialRouteName: 'loginStack',
+  transitionConfig: noTransitionConfig
 })
 
 export default PrimaryNav
