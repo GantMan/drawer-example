@@ -25,7 +25,7 @@ const DrawerStack = DrawerNavigator({
   screen3: { screen: Screen3 },
 }, {
   gesturesEnabled: false,
-  contentComponent: (props) => <DrawerContainer {...props} />
+  contentComponent: DrawerContainer
 })
 
 const DrawerNavigation = StackNavigator({
