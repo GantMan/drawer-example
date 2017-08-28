@@ -9,6 +9,8 @@ Review from the blog, or see it being built in 4 parts:
 
 Review blog post for full analysis of steps.
 
+![drawer example gif](./_art/everything.gif)
+
 ## Generic Readme follows:
 
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
