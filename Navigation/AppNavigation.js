@@ -37,6 +37,8 @@ const DrawerNavigation = StackNavigator({
     title: 'Logged In to your app!',
     gesturesEnabled: false,
     headerLeft: <Text onPress={() => {
+      // Coming soon: navigation.navigate('DrawerToggle')
+      // https://github.com/react-community/react-navigation/pull/2492
       if (navigation.state.index === 0) {
         navigation.navigate('DrawerOpen')
       } else {
