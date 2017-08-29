@@ -36,7 +36,13 @@ const DrawerNavigation = StackNavigator({
     headerStyle: {backgroundColor: 'green'},
     title: 'Logged In to your app!',
     gesturesEnabled: false,
-    headerLeft: <Text onPress={() => navigation.navigate('DrawerOpen')}>Menu</Text>
+    headerLeft: <Text onPress={() => {
+      if (navigation.state.index === 0) {
+        navigation.navigate('DrawerOpen')
+      } else {
+        navigation.navigate('DrawerClose')
+      }
+    }}>Menu</Text>
   })
 })
 
