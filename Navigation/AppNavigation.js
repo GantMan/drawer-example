@@ -28,6 +28,18 @@ const DrawerStack = DrawerNavigator({
   contentComponent: DrawerContainer
 })
 
+const toggleDrawer = (navigation) => {
+  return () => {
+    if (this.drawerOpen) {
+      this.drawerOpen = false
+      return navigation.navigate('DrawerClose')
+    } else {
+      this.drawerOpen = true
+      return navigation.navigate('DrawerOpen')
+    }
+  }
+}
+
 const DrawerNavigation = StackNavigator({
   DrawerStack: { screen: DrawerStack }
 }, {
@@ -36,7 +48,7 @@ const DrawerNavigation = StackNavigator({
     headerStyle: {backgroundColor: 'green'},
     title: 'Logged In to your app!',
     gesturesEnabled: false,
-    headerLeft: <Text onPress={() => navigation.navigate('DrawerOpen')}>Menu</Text>
+    headerLeft: <Text onPress={toggleDrawer(navigation)}>Menu</Text>
   })
 })
 
