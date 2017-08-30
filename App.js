@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View, StatusBar } from 'react-native'
 import { Provider } from 'react-redux'
 import createStore from './Redux'
 /*
@@ -26,6 +26,7 @@ export default class App extends React.Component {
     return (
       <Provider store={store}>
         <View style={styles.container}>
+          <StatusBar barStyle='light-content' />
           <ReduxNavigation />
         </View>
       </Provider>

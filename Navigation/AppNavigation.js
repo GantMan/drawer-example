@@ -28,15 +28,10 @@ const DrawerStack = DrawerNavigator({
   contentComponent: DrawerContainer
 })
 
-const DrawerNavigation = StackNavigator({
-  DrawerStack: { screen: DrawerStack }
-}, {
-  headerMode: 'float',
-  navigationOptions: ({navigation}) => ({
-    headerStyle: {backgroundColor: 'green'},
-    title: 'Logged In to your app!',
-    gesturesEnabled: false,
-    headerLeft: <Text onPress={() => {
+const drawerButton = (navigation) =>
+  <Text
+    style={{padding: 5, color: 'white'}}
+    onPress={() => {
       // Coming soon: navigation.navigate('DrawerToggle')
       // https://github.com/react-community/react-navigation/pull/2492
       if (navigation.state.index === 0) {
@@ -44,7 +39,20 @@ const DrawerNavigation = StackNavigator({
       } else {
         navigation.navigate('DrawerClose')
       }
-    }}>Menu</Text>
+    }
+  }>Menu</Text>
+
+
+const DrawerNavigation = StackNavigator({
+  DrawerStack: { screen: DrawerStack }
+}, {
+  headerMode: 'float',
+  navigationOptions: ({navigation}) => ({
+    headerStyle: {backgroundColor: '#4C3E54'},
+    title: 'Welcome!',
+    headerTintColor: 'white',
+    gesturesEnabled: false,
+    headerLeft: drawerButton(navigation)
   })
 })
 
@@ -56,8 +64,9 @@ const LoginStack = StackNavigator({
 }, {
   headerMode: 'float',
   navigationOptions: {
-    headerStyle: {backgroundColor: 'red'},
-    title: 'You are not logged in'
+    headerStyle: {backgroundColor: '#E73536'},
+    title: 'You are not logged in',
+    headerTintColor: 'white'
   }
 })
 

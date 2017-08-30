@@ -37,7 +37,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   linky: {
-    color: 'blue',
+    fontWeight: 'bold',
+    color: '#4C3E54',
     paddingTop: 10
   }
 })
