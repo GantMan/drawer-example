@@ -8,10 +8,13 @@ Review from the blog, or see it being built in 4 parts:
 * [Step 4](https://github.com/GantMan/drawer-example/tree/step4) - custom drawer with logout
 
 Review blog post for full analysis of steps.
-
 ![drawer example gif](./_art/everything.gif)
 
-## Generic Readme follows:
+_Above steps do not have the same styles as the blog post_
+
+---
+
+## Generic App Readme:
 
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
